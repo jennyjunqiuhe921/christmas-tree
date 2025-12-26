@@ -735,77 +735,82 @@
             document.getElementById('musicBtn').textContent = 'Stop Music 🎵';
             document.getElementById('musicBtn').style.background = 'rgba(255, 215, 0, 0.2)';
 
-            // White Christmas melody (extended version - continuous loop)
+            // We Wish You a Merry Christmas melody (extended version - continuous loop)
             const melody = [
-                // "I'm dreaming of a white Christmas"
-                { note: 392.00, duration: 0.8 }, // G - I'm
-                { note: 440.00, duration: 0.6 }, // A - dream
-                { note: 392.00, duration: 0.5 }, // G - ing
-                { note: 349.23, duration: 0.5 }, // F - of
-                { note: 329.63, duration: 0.6 }, // E - a
-                { note: 261.63, duration: 1.2 }, // C - white
-                { note: 293.66, duration: 0.6 }, // D - Christ
-                { note: 261.63, duration: 1.0 }, // C - mas
-                { note: 0, duration: 0.3 }, // Rest
-
-                // "Just like the ones I used to know"
-                { note: 392.00, duration: 0.7 }, // G - Just
-                { note: 440.00, duration: 0.6 }, // A - like
-                { note: 392.00, duration: 0.5 }, // G - the
-                { note: 349.23, duration: 0.5 }, // F - ones
-                { note: 329.63, duration: 0.5 }, // E - I
-                { note: 293.66, duration: 0.6 }, // D - used
-                { note: 329.63, duration: 0.5 }, // E - to
-                { note: 261.63, duration: 1.2 }, // C - know
-                { note: 0, duration: 0.3 }, // Rest
-
-                // "Where the treetops glisten"
-                { note: 523.25, duration: 0.7 }, // C5 - Where
-                { note: 523.25, duration: 0.6 }, // C5 - the
-                { note: 493.88, duration: 0.6 }, // B - tree
-                { note: 440.00, duration: 0.5 }, // A - tops
-                { note: 493.88, duration: 0.8 }, // B - glis
-                { note: 440.00, duration: 0.8 }, // A - ten
+                // "We wish you a merry Christmas" (first time)
+                { note: 293.66, duration: 0.5 }, // D - We
+                { note: 392.00, duration: 0.5 }, // G - wish
+                { note: 392.00, duration: 0.4 }, // G - you
+                { note: 440.00, duration: 0.4 }, // A - a
+                { note: 392.00, duration: 0.5 }, // G - mer
+                { note: 349.23, duration: 0.4 }, // F# - ry
+                { note: 329.63, duration: 0.6 }, // E - Christ
+                { note: 329.63, duration: 0.8 }, // E - mas
                 { note: 0, duration: 0.2 }, // Rest
 
-                // "And children listen"
-                { note: 440.00, duration: 0.7 }, // A - And
-                { note: 440.00, duration: 0.6 }, // A - chil
-                { note: 392.00, duration: 0.6 }, // G - dren
-                { note: 349.23, duration: 0.5 }, // F - lis
-                { note: 392.00, duration: 0.8 }, // G - ten
+                // "We wish you a merry Christmas" (second time)
+                { note: 293.66, duration: 0.5 }, // D - We
+                { note: 392.00, duration: 0.5 }, // G - wish
+                { note: 392.00, duration: 0.4 }, // G - you
+                { note: 440.00, duration: 0.4 }, // A - a
+                { note: 392.00, duration: 0.5 }, // G - mer
+                { note: 349.23, duration: 0.4 }, // F# - ry
+                { note: 329.63, duration: 0.6 }, // E - Christ
+                { note: 329.63, duration: 0.8 }, // E - mas
+                { note: 0, duration: 0.2 }, // Rest
+
+                // "We wish you a merry Christmas" (third time - higher)
+                { note: 293.66, duration: 0.5 }, // D - We
+                { note: 392.00, duration: 0.5 }, // G - wish
+                { note: 392.00, duration: 0.4 }, // G - you
+                { note: 493.88, duration: 0.4 }, // B - a
+                { note: 493.88, duration: 0.5 }, // B - mer
+                { note: 440.00, duration: 0.4 }, // A - ry
+                { note: 440.00, duration: 0.6 }, // A - Christ
+                { note: 392.00, duration: 0.8 }, // G - mas
+                { note: 0, duration: 0.2 }, // Rest
+
+                // "And a happy new year"
+                { note: 329.63, duration: 0.5 }, // E - And
+                { note: 329.63, duration: 0.4 }, // E - a
+                { note: 440.00, duration: 0.5 }, // A - hap
+                { note: 392.00, duration: 0.4 }, // G - py
+                { note: 349.23, duration: 0.5 }, // F# - new
+                { note: 293.66, duration: 0.4 }, // D - year
+                { note: 293.66, duration: 1.0 }, // D - (hold)
                 { note: 0, duration: 0.3 }, // Rest
 
-                // "To hear sleigh bells in the snow"
-                { note: 392.00, duration: 0.7 }, // G - To
-                { note: 440.00, duration: 0.6 }, // A - hear
-                { note: 392.00, duration: 0.5 }, // G - sleigh
-                { note: 349.23, duration: 0.5 }, // F - bells
-                { note: 329.63, duration: 0.5 }, // E - in
-                { note: 293.66, duration: 0.5 }, // D - the
-                { note: 261.63, duration: 1.2 }, // C - snow
-                { note: 0, duration: 0.4 }, // Rest
+                // "Good tidings we bring"
+                { note: 293.66, duration: 0.5 }, // D - Good
+                { note: 293.66, duration: 0.4 }, // D - ti
+                { note: 261.63, duration: 0.4 }, // C - dings
+                { note: 293.66, duration: 0.5 }, // D - we
+                { note: 329.63, duration: 0.4 }, // E - bring
+                { note: 349.23, duration: 0.6 }, // F# - to
+                { note: 392.00, duration: 0.8 }, // G - you
+                { note: 0, duration: 0.2 }, // Rest
 
-                // Repeat "I'm dreaming of a white Christmas"
-                { note: 392.00, duration: 0.8 }, // G
-                { note: 440.00, duration: 0.6 }, // A
-                { note: 392.00, duration: 0.5 }, // G
-                { note: 349.23, duration: 0.5 }, // F
-                { note: 329.63, duration: 0.6 }, // E
-                { note: 261.63, duration: 1.2 }, // C
-                { note: 293.66, duration: 0.6 }, // D
-                { note: 261.63, duration: 1.0 }, // C
-                { note: 0, duration: 0.3 }, // Rest
+                // "And your kin"
+                { note: 392.00, duration: 0.5 }, // G - And
+                { note: 349.23, duration: 0.4 }, // F# - your
+                { note: 329.63, duration: 0.6 }, // E - kin
+                { note: 0, duration: 0.2 }, // Rest
 
-                // "With every Christmas card I write"
-                { note: 392.00, duration: 0.7 }, // G
-                { note: 440.00, duration: 0.6 }, // A
-                { note: 392.00, duration: 0.5 }, // G
-                { note: 349.23, duration: 0.5 }, // F
-                { note: 329.63, duration: 0.5 }, // E
-                { note: 293.66, duration: 0.6 }, // D
-                { note: 329.63, duration: 0.5 }, // E
-                { note: 261.63, duration: 1.0 }, // C
+                // Final "We wish you a merry Christmas and a happy new year"
+                { note: 293.66, duration: 0.5 }, // D - We
+                { note: 392.00, duration: 0.5 }, // G - wish
+                { note: 392.00, duration: 0.4 }, // G - you
+                { note: 440.00, duration: 0.4 }, // A - a
+                { note: 392.00, duration: 0.5 }, // G - mer
+                { note: 349.23, duration: 0.4 }, // F# - ry
+                { note: 329.63, duration: 0.6 }, // E - Christ
+                { note: 329.63, duration: 0.5 }, // E - mas
+                { note: 329.63, duration: 0.5 }, // E - and
+                { note: 440.00, duration: 0.5 }, // A - a
+                { note: 392.00, duration: 0.4 }, // G - hap
+                { note: 349.23, duration: 0.4 }, // F# - py
+                { note: 293.66, duration: 0.5 }, // D - new
+                { note: 293.66, duration: 1.2 }, // D - year
                 { note: 0, duration: 0.5 }, // Rest before loop
             ];
 
