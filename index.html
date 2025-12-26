@@ -731,66 +731,77 @@
             document.getElementById('musicBtn').textContent = 'Stop Music 🎵';
             document.getElementById('musicBtn').style.background = 'rgba(255, 215, 0, 0.2)';
 
-            // Last Christmas melody (extended version - continuous loop)
+            // White Christmas melody (extended version - continuous loop)
             const melody = [
-                // Intro - Main hook
-                { note: 293.66, duration: 0.5 }, // D
-                { note: 293.66, duration: 0.4 }, // D
-                { note: 329.63, duration: 0.4 }, // E
-                { note: 277.18, duration: 0.4 }, // C#
-                { note: 293.66, duration: 0.6 }, // D
-                { note: 246.94, duration: 0.5 }, // B
-                { note: 220.00, duration: 0.6 }, // A
-                { note: 293.66, duration: 0.8 }, // D
-
-                // Verse melody
-                { note: 293.66, duration: 0.5 }, // D
-                { note: 329.63, duration: 0.4 }, // E
-                { note: 349.23, duration: 0.4 }, // F#
-                { note: 392.00, duration: 0.6 }, // G
-                { note: 349.23, duration: 0.5 }, // F#
-                { note: 329.63, duration: 0.5 }, // E
-                { note: 293.66, duration: 0.8 }, // D
-                { note: 0, duration: 0.2 }, // Rest
-
-                // Build up
-                { note: 440.00, duration: 0.5 }, // A
-                { note: 440.00, duration: 0.4 }, // A
-                { note: 392.00, duration: 0.5 }, // G
-                { note: 349.23, duration: 0.5 }, // F#
-                { note: 329.63, duration: 0.6 }, // E
-                { note: 293.66, duration: 0.5 }, // D
-                { note: 246.94, duration: 0.6 }, // B
-                { note: 293.66, duration: 1.0 }, // D
+                // "I'm dreaming of a white Christmas"
+                { note: 392.00, duration: 0.8 }, // G - I'm
+                { note: 440.00, duration: 0.6 }, // A - dream
+                { note: 392.00, duration: 0.5 }, // G - ing
+                { note: 349.23, duration: 0.5 }, // F - of
+                { note: 329.63, duration: 0.6 }, // E - a
+                { note: 261.63, duration: 1.2 }, // C - white
+                { note: 293.66, duration: 0.6 }, // D - Christ
+                { note: 261.63, duration: 1.0 }, // C - mas
                 { note: 0, duration: 0.3 }, // Rest
 
-                // Chorus variation
-                { note: 392.00, duration: 0.5 }, // G
-                { note: 349.23, duration: 0.4 }, // F#
-                { note: 329.63, duration: 0.5 }, // E
-                { note: 293.66, duration: 0.5 }, // D
-                { note: 329.63, duration: 0.5 }, // E
-                { note: 277.18, duration: 0.4 }, // C#
-                { note: 293.66, duration: 0.8 }, // D
+                // "Just like the ones I used to know"
+                { note: 392.00, duration: 0.7 }, // G - Just
+                { note: 440.00, duration: 0.6 }, // A - like
+                { note: 392.00, duration: 0.5 }, // G - the
+                { note: 349.23, duration: 0.5 }, // F - ones
+                { note: 329.63, duration: 0.5 }, // E - I
+                { note: 293.66, duration: 0.6 }, // D - used
+                { note: 329.63, duration: 0.5 }, // E - to
+                { note: 261.63, duration: 1.2 }, // C - know
+                { note: 0, duration: 0.3 }, // Rest
+
+                // "Where the treetops glisten"
+                { note: 523.25, duration: 0.7 }, // C5 - Where
+                { note: 523.25, duration: 0.6 }, // C5 - the
+                { note: 493.88, duration: 0.6 }, // B - tree
+                { note: 440.00, duration: 0.5 }, // A - tops
+                { note: 493.88, duration: 0.8 }, // B - glis
+                { note: 440.00, duration: 0.8 }, // A - ten
                 { note: 0, duration: 0.2 }, // Rest
 
-                // Bridge
-                { note: 246.94, duration: 0.5 }, // B
-                { note: 277.18, duration: 0.4 }, // C#
-                { note: 293.66, duration: 0.5 }, // D
-                { note: 329.63, duration: 0.5 }, // E
-                { note: 349.23, duration: 0.6 }, // F#
-                { note: 392.00, duration: 0.5 }, // G
-                { note: 440.00, duration: 0.8 }, // A
-                { note: 392.00, duration: 0.6 }, // G
+                // "And children listen"
+                { note: 440.00, duration: 0.7 }, // A - And
+                { note: 440.00, duration: 0.6 }, // A - chil
+                { note: 392.00, duration: 0.6 }, // G - dren
+                { note: 349.23, duration: 0.5 }, // F - lis
+                { note: 392.00, duration: 0.8 }, // G - ten
+                { note: 0, duration: 0.3 }, // Rest
 
-                // Return to hook
-                { note: 349.23, duration: 0.5 }, // F#
-                { note: 329.63, duration: 0.4 }, // E
-                { note: 293.66, duration: 0.5 }, // D
-                { note: 246.94, duration: 0.5 }, // B
-                { note: 220.00, duration: 0.6 }, // A
-                { note: 293.66, duration: 1.2 }, // D (hold)
+                // "To hear sleigh bells in the snow"
+                { note: 392.00, duration: 0.7 }, // G - To
+                { note: 440.00, duration: 0.6 }, // A - hear
+                { note: 392.00, duration: 0.5 }, // G - sleigh
+                { note: 349.23, duration: 0.5 }, // F - bells
+                { note: 329.63, duration: 0.5 }, // E - in
+                { note: 293.66, duration: 0.5 }, // D - the
+                { note: 261.63, duration: 1.2 }, // C - snow
+                { note: 0, duration: 0.4 }, // Rest
+
+                // Repeat "I'm dreaming of a white Christmas"
+                { note: 392.00, duration: 0.8 }, // G
+                { note: 440.00, duration: 0.6 }, // A
+                { note: 392.00, duration: 0.5 }, // G
+                { note: 349.23, duration: 0.5 }, // F
+                { note: 329.63, duration: 0.6 }, // E
+                { note: 261.63, duration: 1.2 }, // C
+                { note: 293.66, duration: 0.6 }, // D
+                { note: 261.63, duration: 1.0 }, // C
+                { note: 0, duration: 0.3 }, // Rest
+
+                // "With every Christmas card I write"
+                { note: 392.00, duration: 0.7 }, // G
+                { note: 440.00, duration: 0.6 }, // A
+                { note: 392.00, duration: 0.5 }, // G
+                { note: 349.23, duration: 0.5 }, // F
+                { note: 329.63, duration: 0.5 }, // E
+                { note: 293.66, duration: 0.6 }, // D
+                { note: 329.63, duration: 0.5 }, // E
+                { note: 261.63, duration: 1.0 }, // C
                 { note: 0, duration: 0.5 }, // Rest before loop
             ];
 
