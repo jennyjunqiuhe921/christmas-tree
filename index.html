@@ -731,44 +731,67 @@
             document.getElementById('musicBtn').textContent = 'Stop Music 🎵';
             document.getElementById('musicBtn').style.background = 'rgba(255, 215, 0, 0.2)';
 
-            // Last Christmas melody (simplified instrumental version)
+            // Last Christmas melody (extended version - continuous loop)
             const melody = [
-                // Main hook melody
-                { note: 293.66, duration: 0.4 }, // D
-                { note: 293.66, duration: 0.3 }, // D
-                { note: 329.63, duration: 0.3 }, // E
-                { note: 277.18, duration: 0.3 }, // C#
+                // Intro - Main hook
                 { note: 293.66, duration: 0.5 }, // D
-                { note: 246.94, duration: 0.4 }, // B
-                { note: 220.00, duration: 0.5 }, // A
-                { note: 293.66, duration: 0.6 }, // D
-
-                // Variation
                 { note: 293.66, duration: 0.4 }, // D
-                { note: 329.63, duration: 0.3 }, // E
-                { note: 349.23, duration: 0.3 }, // F#
-                { note: 392.00, duration: 0.5 }, // G
-                { note: 349.23, duration: 0.4 }, // F#
                 { note: 329.63, duration: 0.4 }, // E
+                { note: 277.18, duration: 0.4 }, // C#
                 { note: 293.66, duration: 0.6 }, // D
-
-                // Bridge section
-                { note: 440.00, duration: 0.4 }, // A
-                { note: 440.00, duration: 0.3 }, // A
-                { note: 392.00, duration: 0.4 }, // G
-                { note: 349.23, duration: 0.4 }, // F#
-                { note: 329.63, duration: 0.5 }, // E
-                { note: 293.66, duration: 0.4 }, // D
                 { note: 246.94, duration: 0.5 }, // B
+                { note: 220.00, duration: 0.6 }, // A
                 { note: 293.66, duration: 0.8 }, // D
 
-                // Resolution
-                { note: 392.00, duration: 0.4 }, // G
-                { note: 349.23, duration: 0.3 }, // F#
+                // Verse melody
+                { note: 293.66, duration: 0.5 }, // D
+                { note: 329.63, duration: 0.4 }, // E
+                { note: 349.23, duration: 0.4 }, // F#
+                { note: 392.00, duration: 0.6 }, // G
+                { note: 349.23, duration: 0.5 }, // F#
+                { note: 329.63, duration: 0.5 }, // E
+                { note: 293.66, duration: 0.8 }, // D
+                { note: 0, duration: 0.2 }, // Rest
+
+                // Build up
+                { note: 440.00, duration: 0.5 }, // A
+                { note: 440.00, duration: 0.4 }, // A
+                { note: 392.00, duration: 0.5 }, // G
+                { note: 349.23, duration: 0.5 }, // F#
+                { note: 329.63, duration: 0.6 }, // E
+                { note: 293.66, duration: 0.5 }, // D
+                { note: 246.94, duration: 0.6 }, // B
+                { note: 293.66, duration: 1.0 }, // D
+                { note: 0, duration: 0.3 }, // Rest
+
+                // Chorus variation
+                { note: 392.00, duration: 0.5 }, // G
+                { note: 349.23, duration: 0.4 }, // F#
+                { note: 329.63, duration: 0.5 }, // E
+                { note: 293.66, duration: 0.5 }, // D
+                { note: 329.63, duration: 0.5 }, // E
+                { note: 277.18, duration: 0.4 }, // C#
+                { note: 293.66, duration: 0.8 }, // D
+                { note: 0, duration: 0.2 }, // Rest
+
+                // Bridge
+                { note: 246.94, duration: 0.5 }, // B
+                { note: 277.18, duration: 0.4 }, // C#
+                { note: 293.66, duration: 0.5 }, // D
+                { note: 329.63, duration: 0.5 }, // E
+                { note: 349.23, duration: 0.6 }, // F#
+                { note: 392.00, duration: 0.5 }, // G
+                { note: 440.00, duration: 0.8 }, // A
+                { note: 392.00, duration: 0.6 }, // G
+
+                // Return to hook
+                { note: 349.23, duration: 0.5 }, // F#
                 { note: 329.63, duration: 0.4 }, // E
                 { note: 293.66, duration: 0.5 }, // D
+                { note: 246.94, duration: 0.5 }, // B
                 { note: 220.00, duration: 0.6 }, // A
-                { note: 293.66, duration: 1.0 }, // D (hold)
+                { note: 293.66, duration: 1.2 }, // D (hold)
+                { note: 0, duration: 0.5 }, // Rest before loop
             ];
 
             let time = audioContext.currentTime;
