@@ -448,6 +448,10 @@
                 // Draw image in center
                 ctx.drawImage(img, 40, 40, 432, 432);
 
+                // Add darkening overlay to reduce brightness
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.35)'; // 35% darker
+                ctx.fillRect(40, 40, 432, 432);
+
                 // Update texture
                 const framedTexture = new THREE.CanvasTexture(canvas);
                 material.map = framedTexture;
